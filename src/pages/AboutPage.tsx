@@ -15,7 +15,7 @@ interface CreateProjectRequest {
 }
 
     const createProject = async (newProject: CreateProjectRequest): Promise<void> => {
-      const response = await fetch('http://project-service-service:8080/api/projects', {
+      const response = await fetch('http://project-service-service.default.svc.cluster.local:8080/api/projects', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <label htmlFor="name">Link URL:</label>
+          <label htmlFor="name">Link name:</label>
           <input
             id="name"
             type="name"
@@ -94,7 +94,7 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <label htmlFor="url">Link Text:</label>
+          <label htmlFor="url">Link url:</label>
           <input
             id="url"
             type="url"

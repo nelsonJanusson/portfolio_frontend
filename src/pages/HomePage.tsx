@@ -18,7 +18,7 @@ interface Link {
 
 // Fetch function
 const fetchData = async (): Promise<Data[]> => {
-  const response = await fetch('http://project-service-service:8080/api/projects');
+  const response = await fetch('http://project-service-service.default.svc.cluster.local:8080/api/project');
   if (!response.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -37,7 +37,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Home Page new</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
